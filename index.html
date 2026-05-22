@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GlamourByLenaa - Luxury Wig Installs & Hair Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional wig installs, braids, and locs in Houston, TX. Book with Lena today.">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #000;
+  color: #f5d7a1;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+  border-bottom: 3px solid #d4af37;
+}
+
+.header h1 {
+  font-size: 48px;
+  color: #f5d7a1;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.header .tagline {
+  color: #f8c8dc;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.header .location {
+  color: #d4af37;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* NAVIGATION */
+.nav {
+  background: #111;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 2px solid #d4af37;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav a {
+  color: #f5d7a1;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #d4af37;
+}
+
+/* SECTIONS */
+.section {
+  margin: 30px;
+  padding: 30px;
+  background: #111;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255,215,0,0.15);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.section h2 {
+  color: #d4af37;
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section h3 {
+  color: #f8c8dc;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.section p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* STYLIST BIO */
+.stylist-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stylist-image {
+  flex: 1;
+  min-width: 250px;
+}
+
+.stylist-image img {
+  width: 100%;
+  border-radius: 15px;
+  border: 3px solid #d4af37;
+  box-shadow: 0 0 20px rgba(255,215,0,0.2);
+}
+
+.stylist-bio {
+  flex: 1;
+  min-width: 250px;
+}
+
+.bio-highlight {
+  background: rgba(212, 175, 55, 0.1);
+  padding: 15px;
+  border-left: 4px solid #d4af37;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+/* SERVICES & PRICING */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service-card {
+  background: #000;
+  padding: 20px;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.service-card h3 {
+  color: #f8c8dc;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #d4af37;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid #d4af37;
+  aspect-ratio: 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #d4af37;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* BUTTONS */
+.button {
+  background: linear-gradient(to right, #d4af37, #f8c8dc);
+  color: black;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255,215,0,0.3);
+}
+
+.button-secondary {
+  background: #d4af37;
+  color: #000;
+}
+
+/* POLICIES */
+.policy-list {
+  background: #000;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #d4af37;
+  margin: 15px 0;
+}
+
+.policy-list li {
+  margin: 12px 0;
+  margin-left: 20px;
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+.policy-list li:before {
+  content: "✓";
+  color: #d4af37;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* LACE REQUIREMENTS */
+.lace-requirements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.lace-card {
+  background: #000;
+  padding: 20px;
+  border: 2px solid #f8c8dc;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.lace-card h3 {
+  color: #f8c8dc;
+  margin-bottom: 10px;
+}
+
+.lace-card p {
+  font-size: 14px;
+  color: #f5d7a1;
+}
+
+/* REVIEWS */
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.review {
+  background: #000;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #d4af37;
+}
+
+.stars {
+  color: #d4af37;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.review p {
+  color: #f5d7a1;
+  font-style: italic;
+}
+
+/* HOURS & INFO */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.info-card {
+  background: #000;
+  padding: 20px;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.info-card h3 {
+  color: #f8c8dc;
+  margin-bottom: 15px;
+}
+
+.info-card p {
+  color: #f5d7a1;
+  margin: 8px 0;
+}
+
+/* CONTACT */
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-link {
+  background: #000;
+  padding: 15px;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.contact-link:hover {
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: 0 0 15px rgba(255,215,0,0.2);
+}
+
+.contact-link a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: #999;
+  border-top: 2px solid #d4af37;
+  background: #000;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 36px;
+  }
+
+  .section {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .section h2 {
+    font-size: 22px;
+  }
+
+  .nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .stylist-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>✨ GlamourByLenaa ✨</h1>
+  <p class="tagline">Luxury Wig Installs • Braids • Locs</p>
+  <p class="location">📍 Houston, TX</p>
+</div>
+
+<!-- NAVIGATION -->
+<div class="nav">
+  <a href="#services">Services</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#policies">Policies</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- STYLIST BIO -->
+<div class="section">
+  <h2>💕 Meet Your Stylist</h2>
+  <div class="stylist-container">
+    <div class="stylist-image">
+      <img src="YOUR-PICTURE-LINK" alt="Lena - Hairstylist">
+    </div>
+    <div class="stylist-bio">
+      <h3>Hello! I'm Lena</h3>
+      <p>I'm a passionate hairstylist dedicated to making you look and feel beautiful. With 5+ years of professional experience, I specialize in luxury wig installations, braids, and locs.</p>
+      <div class="bio-highlight">
+        <p><strong>Age:</strong> 17 years old</p>
+        <p><strong>Experience:</strong> 5+ years of professional hair styling</p>
+        <p><strong>Specialty:</strong> Luxury wig installs, custom braids, and locs</p>
+      </div>
+      <p>Every client leaves my chair feeling confident and gorgeous. I take pride in attention to detail and ensuring each service is flawless.</p>
+      <p><strong>📱 Instagram:</strong> <a href="https://instagram.com/glamourbylenaa" style="color: #d4af37;">@glamourbylenaa</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES & PRICING -->
+<div class="section" id="services">
+  <h2>💎 Services & Pricing</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Wig Install</h3>
+      <p>Professional luxury wig installation with precision and care</p>
+      <div class="price">$120+</div>
+    </div>
+    <div class="service-card">
+      <h3>Braids</h3>
+      <p>Custom braiding styles tailored to your preferences</p>
+      <div class="price">$80+</div>
+    </div>
+    <div class="service-card">
+      <h3>Locs</h3>
+      <p>Beautiful, well-maintained loc installations and maintenance</p>
+      <div class="price">$90+</div>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="section" id="gallery">
+  <h2>📸 Service Gallery</h2>
+  <p>Check out some of my recent work:</p>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="WIG-IMAGE-LINK" alt="Luxury Wig Install">
+      <div class="gallery-label">Wig Install</div>
+    </div>
+    <div class="gallery-item">
+      <img src="BRAIDS-IMAGE-LINK" alt="Custom Braids">
+      <div class="gallery-label">Braids</div>
+    </div>
+    <div class="gallery-item">
+      <img src="LOCS-IMAGE-LINK" alt="Loc Installation">
+      <div class="gallery-label">Locs</div>
+    </div>
+  </div>
+</div>
+
+<!-- LACE REQUIREMENTS -->
+<div class="section">
+  <h2>👑 Lace Requirements</h2>
+  <p>To ensure the best results, please review the following requirements for each wig type:</p>
+  <div class="lace-requirements">
+    <div class="lace-card">
+      <h3>3X4 Lace Wig</h3>
+      <p>✓ Middle on no part only</p>
+      <p>✓ No extra styling</p>
+      <p>✓ Can only receive a middle</p>
+    </div>
+    <div class="lace-card">
+      <h3>5X5 Lace Wig</h3>
+      <p>✓ Flexible styling options</p>
+      <p>✓ Multiple parting styles available</p>
+      <p>✓ Professional installation</p>
+    </div>
+    <div class="lace-card">
+      <h3>6X6 Full Lace</h3>
+      <p>✓ Any styling of your choice</p>
+      <p>✓ Maximum versatility</p>
+      <p>✓ Premium installation</p>
+    </div>
+  </div>
+</div>
+
+<!-- BOOKING -->
+<div class="section">
+  <h2>💕 Book Your Appointment</h2>
+  <p>Ready to get your hair done? Click below to book your appointment:</p>
+  <a href="YOUR-SQUARE-LINK">
+    <button class="button button-secondary">📅 Book Now</button>
+  </a>
+</div>
+
+<!-- DEPOSIT -->
+<div class="section">
+  <h2>💰 Pay Deposit</h2>
+  <p>Secure your appointment with a non-refundable deposit:</p>
+  <p><strong>Deposit Amount:</strong> $25</p>
+  <p><strong>Accepted Payment Methods:</strong> Apple Pay, Cash App</p>
+  <a href="tel:3466287562">
+    <button class="button">💳 Pay Deposit Now</button>
+  </a>
+</div>
+
+<!-- BOOKING POLICIES -->
+<div class="section" id="policies">
+  <h2>📌 Booking Policies</h2>
+  
+  <h3>💵 Payment Information</h3>
+  <ul class="policy-list">
+    <li>Non-refundable $25 deposit required to schedule appointment</li>
+    <li>Can be sent via Cash App (@amberlynette) or Apple Pay (346-628-7562)</li>
+    <li>$2 fee applies for Apple Pay transactions</li>
+    <li>Remaining balance due via cash or Cash App only</li>
+  </ul>
+
+  <h3>📋 Before Your Appointment</h3>
+  <ul class="policy-list">
+    <li>Arrive with clean and blow-dried hair</li>
+    <li>Wig must be dropped off 2-3 days before appointment</li>
+    <li>Use the restroom prior to appointment start time</li>
+    <li>Arrive on time - there is a 10-minute grace period</li>
+  </ul>
+
+  <h3>⏰ Cancellation & Rescheduling</h3>
+  <ul class="policy-list">
+    <li>Cancel 48 hours in advance for full refund</li>
+    <li>If cancelled within 48 hours: deposit is forfeited</li>
+    <li>If more than 10 minutes late: appointment will be cancelled & deposit lost</li>
+    <li>To reschedule: provide at least 48 hours notice</li>
+  </ul>
+
+  <h3>💬 Appointment Notes</h3>
+  <ul class="policy-list">
+    <li>Queue ins are $40 added to remaining balance</li>
+    <li>Sunday appointments are $60 added to remaining balance</li>
+    <li>Do not rush - book only if you have time</li>
+    <li>Receive confirmation text after booking</li>
+    <li>Reminder text 24 hours before appointment</li>
+    <li>Text alert when stylist is ready</li>
+  </ul>
+</div>
+
+<!-- HOURS & CONTACT -->
+<div class="section" id="contact">
+  <h2>⏰ Hours & Contact Info</h2>
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>Hours</h3>
+      <p><strong>Monday–Friday:</strong> 4PM–10PM</p>
+      <p><strong>Saturday:</strong> 10AM–6PM</p>
+      <p><strong>Sunday:</strong> Closed</p>
+    </div>
+    <div class="info-card">
+      <h3>Location</h3>
+      <p>Houston, TX</p>
+      <p>Appointments available by booking only</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 30px;">Connect With Me</h3>
+  <div class="contact-links">
+    <div class="contact-link">
+      <p>📱 Instagram</p>
+      <a href="https://instagram.com/glamourbylenaa">@glamourbylenaa</a>
+    </div>
+    <div class="contact-link">
+      <p>💬 Cash App</p>
+      <a href="https://cash.app/$amberlynette">@amberlynette</a>
+    </div>
+    <div class="contact-link">
+      <p>📞 Apple Pay</p>
+      <a href="tel:3466287562">346-628-7562</a>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<div class="section" id="reviews">
+  <h2>⭐ Client Reviews</h2>
+  <div class="reviews-container">
+    <div class="review">
+      <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+      <p>"Lena is the BEST! My wig was absolutely flawless. Will definitely be back!"</p>
+    </div>
+    <div class="review">
+      <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+      <p>"Very professional and neat braids! She's so talented and easy to work with."</p>
+    </div>
+    <div class="review">
+      <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+      <p>"I love my hair every time I leave! Lena always delivers quality work. 💕"</p>
+    </div>
+  </div>
+</div>
+
+<!-- BOOKING CONFIRMATION -->
+<div class="section">
+  <h2>📲 After You Book</h2>
+  <ul class="policy-list">
+    <li>You will receive a confirmation text after booking</li>
+    <li>Reminder text 24 hours before your appointment</li>
+    <li>Text alert when stylist is ready for you</li>
+    <li>Easy rescheduling via text if needed</li>
+  </ul>
+</div>
+
+<!-- TAG IN SELFIES -->
+<div class="section">
+  <h2>📸 Tag Me in Your Selfies!</h2>
+  <p>Love your new look? Show it off! Tag <strong>@glamourbylenaa</strong> on Instagram for a chance to be featured on my page. 💕</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>© 2026 GlamourByLenaa - Luxury Hair Services</p>
+  <p>Houston, TX | By Appointment Only</p>
+  <p style="font-size: 12px; margin-top: 15px;">Follow @glamourbylenaa on Instagram for updates and new services</p>
+</div>
+
+</body>
+</html>
